@@ -1,4 +1,6 @@
 <?php include('../template/cabecera.php'); ?>
+<?php include('../secciones/cursos.php'); ?>
+
 <div class="col-md-5">
    <form action="" method="post">
       <div class="card">
@@ -14,12 +16,12 @@
             </div>
             <div class="mb-3">
                <label for="" class="form-label">Nombre</label>
-               <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre">
+               <input type="text" class="form-control" name="nombre_curso" id="nombre_curso" aria-describedby="helpId" placeholder="Nombre">
             </div>
             <div class="btn-group" role="group" aria-label="Button group name">
-               <button type="button" class="btn btn-success">Agregar</button>
-               <button type="button" class="btn btn-primary">Editar</button>
-               <button type="button" class="btn btn-danger">Borrar</button>
+               <button type="submit" name="accion" value="agregar" class="btn btn-success">Agregar</button>
+               <button type="submit" name="accion" value="editar" class="btn btn-primary">Editar</button>
+               <button type="submit" name="accion" value="borrar" class="btn btn-danger">Borrar</button>
             </div>
          </div>
       </div>
