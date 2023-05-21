@@ -16,13 +16,13 @@
    <header>
       <!-- place navbar here -->
    </header>
-   <body>
-      <div class="container">
-         <div class="row">
-            <div class="col-md-4">
-            <br/>
-            </div>
-            <div class="col-md-4">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4">
+
+         </div>
+         <div class="col-md-4">
+            <form action="secciones/index.php" method="post">
                <div class="card">
                   <div class="card-header">
                      Inicio de sesión
@@ -39,11 +39,11 @@
                      </div>
                      <button type="button" class="btn btn-primary" id="btnLogin">Iniciar sesión</button>
                   </div>
-               </div>
-            </div>
+            </form>
          </div>
       </div>
-   </body>
+   </div>
+   </div>
    <footer>
       <!-- place footer here -->
    </footer>
