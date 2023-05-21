@@ -10,7 +10,6 @@ class BD
       if (!isset(self::$instancia)) {
          $opciones[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
          self::$instancia = new PDO('mysql:host=localhost;dbname=web_app', 'root', '', $opciones);
-         echo "Conexión exitosa";
       }
       return self::$instancia;
    }

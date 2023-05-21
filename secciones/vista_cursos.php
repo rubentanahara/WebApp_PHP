@@ -12,11 +12,11 @@
             <p class="card-text">Text</p>
             <div class="mb-3">
                <label for="" class="form-label">ID</label>
-               <input type="text" class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="ID">
+               <input type="text" class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="ID" value="<?php echo $id ?>">
             </div>
             <div class="mb-3">
                <label for="" class="form-label">Nombre</label>
-               <input type="text" class="form-control" name="nombre_curso" id="nombre_curso" aria-describedby="helpId" placeholder="Nombre">
+               <input type="text" class="form-control" name="nombre_curso" id="nombre_curso" aria-describedby="helpId" placeholder="Nombre" value="<?php echo $nombre_curso ?>">
             </div>
             <div class="btn-group" role="group" aria-label="Button group name">
                <button type="submit" name="accion" value="agregar" class="btn btn-success">Agregar</button>
@@ -38,12 +38,18 @@
             </tr>
          </thead>
          <tbody>
-            <tr>
-               <td scope="row">1</td>
-               <td>Aprende Bash</td>
-               <td>Seleccionar</td>
-            </tr>
-
+            <?php foreach ($listaCursos as $curso) { ?>
+               <tr>
+                  <td scope="row"><?php echo $curso->id ?></td>
+                  <td><?php echo $curso->nombre_curso ?></td>
+                  <td>
+                     <form action="" method="post">
+                        <input type="hidden" id="id" name="id" value="<?php echo $curso->id ?>">
+                        <input type="submit" value="Seleccionar" name="accion" class="btn btn-info">
+                     </form>
+                  </td>
+               </tr>
+            <?php } ?>
          </tbody>
       </table>
    </div>
