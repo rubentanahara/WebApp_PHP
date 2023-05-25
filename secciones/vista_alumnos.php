@@ -66,7 +66,9 @@
                      <?php
                      foreach ($alumno["cursos"] as $curso) { ?>
                         <br />
-                        - <a href=""> <?php echo $curso["nombre_curso"]; ?></a>
+                        - <a href="certificado.php?id_curso=<?php echo $curso["id"]; ?>&id_alumno=<?php echo $alumno["id"]; ?>">
+                           <?php echo $curso["nombre_curso"]; ?>
+                        </a>
                      <?php } ?>
                   </td>
                   <td>
